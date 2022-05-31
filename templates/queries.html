@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madlibs</title>
-</head>
-
+{% extends "base.html" %}
+{% block body %}
 <body>
     <h1>Madlibs</h1>
-    <form action="/story">
+    <form action="/result">
         {% for prompt in prompts %}
         <p>{{ prompt }}:
             <input name="{{ prompt }}">
@@ -19,5 +11,4 @@
         <button>Submit</button>
     </form>
 </body>
-
-</html>
+{% endblock %}

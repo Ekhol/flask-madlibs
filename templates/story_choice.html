@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+<body>
+    <h1>Madlibs Stories</h1>
+    <form action="/story">
+
+        {% for story_obj in story_list %}
+        <div>
+        {{story_obj.story.template}}
+        <input type="radio" id="{{story_obj.id}}"name="story_id" value="{{story_obj.id}}">
+        </div>
+
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+</body>
+{% endblock %}
